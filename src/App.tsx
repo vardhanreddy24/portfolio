@@ -160,7 +160,7 @@ export default function App() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent opacity-50" />
             <img 
-              src="IMG-20231030-WA0032.jpg" 
+              src="https://drive.google.com/file/d/1i7FdDpdR6yZko_dEdzC9BLgZV3hT70uq/view?usp=sharing" 
               alt="Guru Vardhan Reddy" 
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               referrerPolicy="no-referrer"
