@@ -127,7 +127,7 @@ export default function App() {
               System Status: Operational
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-zinc-100 tracking-tight leading-[0.9]">
-              Securing the <span className="text-emerald-500 terminal-glow italic">Digital</span> Frontier.
+              Guru <span className="text-emerald-500 terminal-glow italic">Vardhan</span> Reddy.
             </h1>
             <p className="text-lg text-zinc-400 max-w-lg leading-relaxed">
               Cybersecurity enthusiast and developer focused on building secure systems, network analysis tools, and automated security workflows. Currently pursuing B.Tech at LPU.
@@ -159,9 +159,12 @@ export default function App() {
             className="relative aspect-square md:aspect-auto md:h-[500px] bg-zinc-900/50 rounded-2xl border border-white/5 overflow-hidden group"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent opacity-50" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <Shield className="w-48 h-48 text-emerald-500/20 group-hover:text-emerald-500/40 transition-colors duration-700" />
-            </div>
+            <img 
+              src="IMG-20231030-WA0032.jpg" 
+              alt="Guru Vardhan Reddy" 
+              className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              referrerPolicy="no-referrer"
+            />
             <div className="absolute bottom-6 left-6 right-6 p-6 bg-black/40 backdrop-blur-md rounded-xl border border-white/5 space-y-2">
               <div className="flex justify-between items-center">
                 <span className="text-[10px] font-mono uppercase tracking-widest opacity-50">Active Session</span>
