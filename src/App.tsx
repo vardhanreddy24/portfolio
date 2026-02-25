@@ -160,7 +160,7 @@ export default function App() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent opacity-50" />
             <img 
-              src="https://github.com/vardhanreddy24/portfolio/blob/ff48b8477b39ad429734756eb3267222010886a5/IMG-20231030-WA0032.jpg" 
+              src="https://collection.cloudinary.com/de6ugxmor/f6781161834360a1a9f1af74105b94eb" 
               alt="Guru Vardhan Reddy" 
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               referrerPolicy="no-referrer"
