@@ -15,7 +15,8 @@ import {
   Cpu, 
   ExternalLink,
   Award,
-  Code2
+  Code2,
+  Briefcase
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -30,31 +31,52 @@ export default function App() {
   const projects = [
     {
       title: "File Encryption & Decryption Tool",
-      tech: "Python, Cryptography (Fernet AES)",
+      tech: ["Python", "Cryptography", "Fernet AES"],
       period: "July 2024 - Sep 2024",
-      description: "Built a secure file encryption–decryption utility to safeguard sensitive data through strong symmetric encryption. Enabled CLI-based key generation and decryption workflows supporting any file type.",
-      icon: <Lock className="w-5 h-5" />
+      description: "Built a secure file encryption–decryption utility in Python using the Cryptography (Fernet AES) library to safeguard sensitive data through strong symmetric encryption. Enabled CLI-based key generation, encryption, and decryption workflows supporting any file type, ensuring data confidentiality and secure transfer.",
+      icon: <Lock className="w-5 h-5" />,
+      github: "https://github.com/vardhanreddy24",
+      demo: "#"
     },
     {
-      title: "Secure Login System",
-      tech: "Python, Flask, SQLite",
+      title: "Secure Login System (Flask)",
+      tech: ["Python", "Flask", "SQLite", "BCrypt"],
       period: "Jan 2024 - July 2024",
-      description: "Developed a secure user authentication system with hashed password storage, session management, and database-backed registration. Designed modular structure with protected routes and SQL injection safeguards.",
-      icon: <Shield className="w-5 h-5" />
+      description: "Built a secure user authentication system using Flask, implementing hashed password storage, session management, and database-backed registration and login. Designed a modular structure with protected routes, input validation, and safeguards against common vulnerabilities such as brute-force and SQL injection.",
+      icon: <Shield className="w-5 h-5" />,
+      github: "https://github.com/vardhanreddy24",
+      demo: "#"
     },
     {
       title: "Firewall Automation Script",
-      tech: "Python, Linux UFW",
+      tech: ["Python", "Linux UFW", "Bash"],
       period: "Jan 2025 - Feb 2025",
-      description: "Simplified security management on Linux servers through automated UFW rule handling. Features include enabling/disabling firewall, port management, and active rule monitoring via interactive CLI.",
-      icon: <Cpu className="w-5 h-5" />
+      description: "Developed a firewall automation tool using Python to simplify security management on Linux servers through automated UFW rule handling. Implemented features to enable/disable firewall, allow/deny ports, and monitor active rules using a simple interactive CLI menu.",
+      icon: <Cpu className="w-5 h-5" />,
+      github: "https://github.com/vardhanreddy24",
+      demo: "#"
     },
     {
       title: "Network Packet Sniffer",
-      tech: "Python, Scapy",
+      tech: ["Python", "Scapy", "Networking"],
       period: "May 2025 - July 2025",
-      description: "Real-time network packet sniffer capturing and summarizing live traffic. Displays protocol info, source/destination IPs, and suspicious patterns for basic network monitoring.",
-      icon: <Network className="w-5 h-5" />
+      description: "Created a real-time network packet sniffer using Scapy to capture, analyze, and summarize live network traffic across system interfaces. Implemented packet inspection to display protocol information, source/destination IPs, and suspicious patterns for basic network monitoring.",
+      icon: <Network className="w-5 h-5" />,
+      github: "https://github.com/vardhanreddy24",
+      demo: "#"
+    }
+  ];
+
+  const experience = [
+    {
+      company: "Freelance / Independent Projects",
+      role: "Cybersecurity Developer",
+      period: "Jan 2024 - Present",
+      responsibilities: [
+        "Developed custom security tools including file encryption utilities and network packet sniffers using Python and Scapy.",
+        "Implemented secure authentication systems and firewall automation scripts for Linux environments.",
+        "Conducted self-directed research into network security vulnerabilities and mitigation strategies."
+      ]
     }
   ];
 
@@ -98,8 +120,9 @@ export default function App() {
           <nav className="hidden md:flex items-center gap-8 text-xs font-mono uppercase tracking-widest">
             <a href="#about" className="hover:text-emerald-400 transition-colors">01. About</a>
             <a href="#skills" className="hover:text-emerald-400 transition-colors">02. Skills</a>
-            <a href="#projects" className="hover:text-emerald-400 transition-colors">03. Projects</a>
-            <a href="#education" className="hover:text-emerald-400 transition-colors">04. Education</a>
+            <a href="#experience" className="hover:text-emerald-400 transition-colors">03. Experience</a>
+            <a href="#projects" className="hover:text-emerald-400 transition-colors">04. Projects</a>
+            <a href="#education" className="hover:text-emerald-400 transition-colors">05. Education</a>
           </nav>
           <div className="flex items-center gap-4">
             <a href="mailto:bollaguruvardhanreddy@gmail.com" className="p-2 hover:bg-white/5 rounded-full transition-colors">
@@ -160,7 +183,7 @@ export default function App() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent opacity-50" />
             <img 
-              src="https://collection.cloudinary.com/de6ugxmor/f6781161834360a1a9f1af74105b94eb" 
+              src="/IMG-20231030-WA0032.jpg" 
               alt="Guru Vardhan Reddy" 
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
               referrerPolicy="no-referrer"
@@ -225,6 +248,52 @@ export default function App() {
           </div>
         </section>
 
+        {/* Experience Section */}
+        <section id="experience" className="space-y-12">
+          <div className="space-y-2">
+            <span className="text-emerald-500 font-mono text-xs uppercase tracking-widest">Career Path</span>
+            <h2 className="text-3xl font-bold text-zinc-100">Experience</h2>
+          </div>
+
+          <div className="space-y-8">
+            {experience.map((exp, idx) => (
+              <motion.div 
+                key={exp.company}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: idx * 0.1 }}
+                viewport={{ once: true }}
+                className="p-8 bg-zinc-900/30 rounded-2xl border border-white/5 hover:border-emerald-500/30 transition-all group"
+              >
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-emerald-500/10 rounded-xl text-emerald-500">
+                      <Briefcase className="w-6 h-6" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-zinc-100">{exp.role}</h3>
+                      <p className="text-emerald-500 font-mono text-sm">{exp.company}</p>
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <span className="text-xs font-mono text-zinc-500 bg-white/5 px-3 py-1 rounded-full uppercase tracking-wider">
+                      {exp.period}
+                    </span>
+                  </div>
+                </div>
+                <ul className="space-y-3">
+                  {exp.responsibilities.map((resp, i) => (
+                    <li key={i} className="text-sm text-zinc-400 flex items-start gap-3">
+                      <span className="text-emerald-500 mt-1.5 w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
+                      {resp}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
         {/* Projects Section */}
         <section id="projects" className="space-y-12">
           <div className="space-y-2">
@@ -254,15 +323,18 @@ export default function App() {
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 pt-2">
-                    {project.tech.split(', ').map(t => (
+                    {project.tech.map(t => (
                       <span key={t} className="px-2 py-1 bg-white/5 rounded text-[10px] font-mono text-zinc-500">
                         {t}
                       </span>
                     ))}
                   </div>
-                  <div className="pt-4">
-                    <a href="https://github.com/vardhanreddy24" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-mono text-emerald-500 hover:text-emerald-400 transition-colors">
-                      VIEW_SOURCE_CODE <ExternalLink className="w-3 h-3" />
+                  <div className="pt-4 flex items-center gap-6">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-mono text-emerald-500 hover:text-emerald-400 transition-colors">
+                      GITHUB <Github className="w-3 h-3" />
+                    </a>
+                    <a href={project.demo} className="inline-flex items-center gap-2 text-xs font-mono text-zinc-400 hover:text-emerald-400 transition-colors">
+                      LIVE_DEMO <ExternalLink className="w-3 h-3" />
                     </a>
                   </div>
                 </div>
